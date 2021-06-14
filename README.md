@@ -63,7 +63,7 @@ class PersistenceStrategy implements PersistenceTemplate
     // Decorado por composição
     public function __construct(
         protected PersistenceTemplate $persistence
-    ) { }
+    ) {}
 
     public function persist(object $object): void
     {
@@ -132,7 +132,7 @@ class PersistenceProxy implements PersistenceTemplate
     // Proxy para lógica pré e post executions
     public function __construct(
         protected PersistenceStrategy $persistenceStrategy
-    ) { }
+    ) {}
 
     public function persist(object $object): void
     {
