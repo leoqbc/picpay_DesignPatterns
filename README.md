@@ -23,8 +23,10 @@ Implementação com Design Patterns (Client):
 ```php
 // Usabilidade com Design Patterns
 // FactoryMethod > Proxy > TemplateMethod(interface) > Strategy > Decorator
-// $dataMapper = PersistenceFactory::create($config['persistenceClass']); ou
-$dataMapper = PersistenceFactory::create(MongoDB::class);
+$dataMapper = PersistenceFactory::create($config['persistenceClass']);
+
+// ou especificando na em hard-coded(não recomendado)
+// $dataMapper = PersistenceFactory::create(MongoDB::class);
 
 $obj1 = new StdClass();
 $obj2 = new StdClass();
