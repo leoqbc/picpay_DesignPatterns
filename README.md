@@ -23,15 +23,18 @@ Implementação com Design Patterns (Client):
 ```php
 // Usabilidade com Design Patterns
 // FactoryMethod > Proxy > TemplateMethod(interface) > Strategy > Decorator
-$dataMapper = PersistenceFactory::create($config['persistenceClass']);
 
-// ou especificando na em hard-coded(não recomendado)
-// $dataMapper = PersistenceFactory::create(MongoDB::class);
+// 1. Escolhemos a decoração via $config['persistenceClass']
+// 2. Usamos o factory para criar a instância Proxy
+// 3. Proxy recebe PersistenceStrategy com sua classe de tipo de persistencia
+$dataMapper = PersistenceFactory::create($config['persistenceClass']);
 
 $obj1 = new StdClass();
 $obj2 = new StdClass();
 
-// Template Method Methods
+// 4. O método invocado depende da escolha da decoração
+// em $config
+// ex: "MongoDB"
 $dataMapper->persist($obj1);
 $dataMapper->delete($obj2);
 
