@@ -1,6 +1,8 @@
 # PicPay Design Patterns em PHP 8
 Repo do código exemplo da Talk Design Patterns em PHP 8 por Leonardo Tumadjian
 
+Com carinho ao pessoal do PicPay 
+
 Simples implementação:
 
 ```php
